@@ -10,6 +10,34 @@ use App\PlaceCategory;
 
 class placeController extends Controller
 {
+    public function list()
+    {
+        $array = [];
+
+        $places = Place::all();
+
+        if (count($places) > 0) {
+            foreach ($places as $place) {
+                $array['result'][] = [
+                    'id' => $place->id,
+                    'userId' => $place->user_id,
+                    'name' => $place->name,
+                    'image' => $place->image,
+                    'address' => $place->address,
+                    'phone' => $place->phone,
+                    'website' => $place->website,
+                    'description' => $place->description,
+                    'latitude' => $place->latitude,
+                    'longitude' => $place->longitude,
+                    'lastUpdate' => $place->last_update,
+                ];
+            }
+        } else {
+            $array['result'] = "";
+        }
+
+        return $array;
+    }
     public function create(Request $request)
     {
         $array = ['error' => ''];

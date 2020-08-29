@@ -19,7 +19,7 @@ Route::get('/ping', function(){
 });
 
 Route::post('/place/create', "placeController@create");
-/*Route::post('/place/list', "placeController@list");
-Route::post('/place/search', "placeController@search");
+Route::post('/place/list', "placeController@list");
+/*Route::post('/place/search', "placeController@search");
 
 Route::post('/info/list', "infoController@list");*/
