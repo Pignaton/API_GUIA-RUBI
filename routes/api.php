@@ -14,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/ping', function(){
+Route::get('/ping', function(){
     return ['pong' => true];
-});*/
+});
 
 Route::post('/place/create', "placeController@create");
-Route::post('/place/list', "placeController@list");
+Route::get('/place/list', "placeController@list");
 
 Route::post('/search', "searchController@search");
 
 Route::get('/info/list', "infoController@list");
+
+Route::get('/category', 'categoryController@list');

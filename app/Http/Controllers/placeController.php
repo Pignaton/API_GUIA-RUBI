@@ -22,7 +22,7 @@ class placeController extends Controller
                     'id' => $place->id,
                     'userId' => $place->user_id,
                     'name' => $place->name,
-                    'image' => url('media/places/'.$place->image),
+                    'image' => url('media/places/' . $place->image),
                     'address' => $place->address,
                     'phone' => $place->phone,
                     'website' => $place->website,
