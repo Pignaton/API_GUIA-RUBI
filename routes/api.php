@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ping', function(){
+/*Route::get('/ping', function(){
     return ['pong' => true];
-});
+});*/
 
 Route::post('/place/create', "placeController@create");
 Route::get('/place/list', "placeController@list");
